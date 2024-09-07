@@ -27,7 +27,7 @@ const generateImage = async (prompt: string) => {
   res.uid = uid
   return res
 }
-
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 const checkQueue = (uid: string): Promise<any> => {
   return new Promise((resolve, reject) => {
     try {
@@ -62,7 +62,7 @@ const checkQueue = (uid: string): Promise<any> => {
   // .then((blob) => URL.createObjectURL(blob))
   // Update image
   .then((data) => {
-          let res: any = data.split("\n");
+          const res = data.split("\n");
           const lastItem = res[res.length - 5];
           console.log(lastItem);
           const betterResult = res.filter((item: string) => item !== '');
