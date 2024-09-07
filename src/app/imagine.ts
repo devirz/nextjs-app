@@ -1,4 +1,3 @@
-import get from "axios"
 import generateRandomString from "./randomString"
 
 const url = "https://prithivmlmods-imagineo-4k.hf.space/queue/join?__theme=light"

@@ -1,4 +1,5 @@
 import { SetStateAction, useState } from "react";
+import Image from "next/image";
 // import Loader from "./Loader";
 import Alert from "@/components/Alert";
 import { checkQueue, generateImage } from "@/app/imagine"
@@ -42,9 +43,9 @@ export default function Card() {
     <div className="card bg-neutral w-5/6 shadow-xl">
         <figure className="px-10 pt-10">
             {/* {isLoading && <Loader /> } */}
-            <img
+            <Image
             src={imageUrl}
-            alt="Shoes"
+            alt="imagine"
             style={{
                 filter: isLoading ? 'blur(10px)' : 'none',
                 transition: 'filter 0.3s ease-in-out',
