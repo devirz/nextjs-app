@@ -8,7 +8,7 @@ export default function Card() {
     const [prompt, setPrompt] = useState('')
     const [isInputDisabled, setIsInputDisabled] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
-    const [imageUrl, setImageUrl] = useState('https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp'); // آدرس اولیه تصویر
+    const [imageUrl, setImageUrl] = useState('https://avatars.githubusercontent.com/u/165787630?v=4'); // آدرس اولیه تصویر
     const [alert, setAlert] = useState('');
     // const [alertMessage, setAlertMessage] = useState('');
 
@@ -46,6 +46,8 @@ export default function Card() {
             <Image
             src={imageUrl}
             alt="imagine"
+            width={500}
+            height={500}
             style={{
                 filter: isLoading ? 'blur(10px)' : 'none',
                 transition: 'filter 0.3s ease-in-out',
